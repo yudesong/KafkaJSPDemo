@@ -54,6 +54,7 @@
 	    	        <td>
 	    	           	   <button id="kFStart-1" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
 	        	           <button id="kFStop-1" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	        	           <span id="kF-info1" style="font-size:14px;"></span>
 	        	        </td>    
 	    	     </tr>
 	        	     <tr>
@@ -83,5 +84,6 @@
 	    	   </tbody>
 		</table>
 	</div>
+	<%@include file="TestKafka.jsp" %>
 </body>
 </html>

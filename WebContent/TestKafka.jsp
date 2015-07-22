@@ -18,17 +18,17 @@
 		str+="$(function(){";
 		//Test 
 		if(sb.toString().contains("server.properties")){
-			str+="$('#zkStart-1').attr('disabled',true);";
-			str+="$('#zk-info1').addClass('am-alert am-alert-default');$('#zk-info1').html('启动中');";
+			str+="$('#kFStart-1').attr('disabled',true);";
+			str+="$('#kF-info1').addClass('am-alert am-alert-default');$('#kF-info1').html('启动中');";
 		}
 		//Test
-		if(sb.toString().contains("zookeeper-1.properties")){
-			str+="$('#zkStart-2').attr('disabled',true);";
+		if(sb.toString().contains("server-1.properties")){
+			str+="$('#kFStart-2').attr('disabled',true);";
 			str+="$('#zk-info2').addClass('am-alert am-alert-default');$('#zk-info2').html('启动中');";
 		}
 		//Test 
-		if(sb.toString().contains("zookeeper-2.properties")){
-			str+="$('#zkStart-3').attr('disabled',true);";
+		if(sb.toString().contains("server-2.properties")){
+			str+="$('#kFStart-3').attr('disabled',true);";
 			str+="$('#zk-info3').addClass('am-alert am-alert-default');$('#zk-info3').html('启动中');";
 		}
 		str+=	"});</script>";
