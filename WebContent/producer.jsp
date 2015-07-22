@@ -40,16 +40,16 @@
 		<div><strong>Producer</strong></div>
    		<div>
         			<input type="radio" name="doc-radio-1" value="option1" >
-        			单选框 - 选项1
+        			系统随机分区&nbsp;&nbsp;&nbsp;
         			<input type="radio" name="doc-radio-1" value="option1" >
-        			单选框 - 选项1
+        			key-value均匀分区
     		</div>
     		<div>
     			<span>Message:</span>&nbsp;&nbsp;&nbsp;
     			<input type="radio" name="doc-radio-1" value="option1" >
-        			单选框 </br>
+        			1-99随机数字 </br>
     			<textarea class="" rows="5" id="doc-ta-1"></textarea></br>
-    			<a type="button" class="am-btn am-btn-secondary am-radius">Send</a>
+    			<button  type="button" class="am-btn am-btn-secondary am-radius">Send</button>
     		</div>		
 	</div>
 </body>
