@@ -37,7 +37,7 @@ public class ProducerServlet extends HttpServlet {
 		boolean bool = Boolean.parseBoolean(messMethod);
 		ProducerDemo producer = new ProducerDemo(brokerList, topic, bool);
 		String result=producer.sendMessageBat();
-		PrintWriter out = resp.getWritter();
+		PrintWriter out = resp.getWriter();
 		out.print(result);
 	}
 }

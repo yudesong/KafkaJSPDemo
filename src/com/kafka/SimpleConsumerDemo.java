@@ -33,7 +33,7 @@ public class SimpleConsumerDemo {
   }
 
   public String printMessages(ByteBufferMessageSet messageSet) throws UnsupportedEncodingException {
-    StringBuffer sb = new StringBuffer("")  
+    StringBuffer sb = new StringBuffer("") ;
     for(MessageAndOffset messageAndOffset: messageSet) {
       ByteBuffer payload = messageAndOffset.message().payload();
       byte[] bytes = new byte[payload.limit()];
@@ -52,6 +52,6 @@ public class SimpleConsumerDemo {
             .addFetch(topic, partition, offset,fetchSize)  //addFetch(topic, partition, offset, fetchSize)
             .build();
     FetchResponse fetchResponse = simpleConsumer.fetch(req);
-    return printMessages((ByteBufferMessageSet) fetchResponse.messageSet(KafkaProperties.topic4, 0));
+    return printMessages((ByteBufferMessageSet) fetchResponse.messageSet(topic, partition));
   }
 }

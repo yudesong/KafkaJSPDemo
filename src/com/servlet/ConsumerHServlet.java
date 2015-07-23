@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.kafka.ConsumerHigh;
 import com.kafka.ProducerDemo;
 
 import kafka.javaapi.producer.Producer;
@@ -35,7 +36,7 @@ public class ConsumerHServlet extends HttpServlet {
     String groupId = req.getParameter("groupId");
     ConsumerHigh consumer = new ConsumerHigh(topic, zkConn,groupId);
     String result=consumer.getMessage();
-    PrintWriter out = resp.getWritter();
+    PrintWriter out = resp.getWriter();
     out.print(result);
   }
 }

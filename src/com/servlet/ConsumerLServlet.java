@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.kafka.ProducerDemo;
+import com.kafka.SimpleConsumerDemo;
 
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
@@ -31,12 +32,18 @@ public class ConsumerLServlet extends HttpServlet {
     //ConsumerLow Demo
         
     String topic = req.getParameter("topic");
-    String kafkaServerPort = req.getParameter("kafkaServerPort");
-    String partition = req.getParameter("partition");
-    String offset = req.getParameter("offset");
+    int kafkaServerPort = Integer.parseInt(req.getParameter("kafkaServerPort"));
+    int partition = Integer.parseInt(req.getParameter("partition"));
+    int offset = Integer.parseInt(req.getParameter("offset"));
     SimpleConsumerDemo consumer = new SimpleConsumerDemo(topic,kafkaServerPort,partition,offset);
-    String result=consumer.pullMessage();
-    PrintWriter out = resp.getWritter();
+    String result = null;
+	try {
+		result = consumer.pullMessage();
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+    PrintWriter out = resp.getWriter();
     out.print(result);
   }
 }

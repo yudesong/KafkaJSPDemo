@@ -13,8 +13,8 @@ public class ConsumerHigh
 {
   private final ConsumerConnector consumer;
   private final String topic;
-  private String groupId;
-  private String zkConn;
+  private static String groupId;
+  private static String zkConn;
   public ConsumerHigh(String topic,String zkConn,String groupId)
   {
     consumer = kafka.consumer.Consumer.createJavaConsumerConnector(
@@ -44,9 +44,10 @@ public class ConsumerHigh
     KafkaStream<byte[], byte[]> stream =  consumerMap.get(topic).get(0);
     ConsumerIterator<byte[], byte[]> it = stream.iterator();
     StringBuffer sb = new StringBuffer("");
-    while(it.hasNext())
+    while(it.hasNext()){
 //      System.out.println("Consumer:------>"+new String(it.next().message()));
     	sb.append(it.next().message());
   	}
   	return sb.toString();
+}
 }
