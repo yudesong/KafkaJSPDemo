@@ -21,7 +21,7 @@ public class ProducerDemo {
         props.put("request.required.acks", "1");  
     }
 
-    public void sendMessageBat(){
+    public String sendMessageBat(){
         ProducerConfig config = new ProducerConfig(props);  
         Producer<String, String> producer = new Producer<String, String>(config);  
         long start=System.currentTimeMillis();  
@@ -31,8 +31,9 @@ public class ProducerDemo {
             //如果topic不存在，则会自动创建，默认replication-factor为1，partitions为0  
             KeyedMessage<String, String> data = new KeyedMessage<String, String>(  
                     topic, ip, msg);  
-            producer.send(data);
-            producer.close();  
+            producer.send(data);  
         }  
+        producer.close();
+        return "success";
     } 
 }

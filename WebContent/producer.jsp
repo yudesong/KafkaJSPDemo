@@ -64,6 +64,7 @@
         			1-99随机数字 </br>
     			<textarea class="" rows="5" id="doc-ta-1"></textarea></br>
     			<button  id="sendProducer" type="button" class="am-btn am-btn-secondary am-radius">Send</button>
+    			<span id="pD-info1" style="font-size:14px;"></span>
     		</div>		
 	</div>
 </body>

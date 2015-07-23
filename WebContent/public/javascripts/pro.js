@@ -13,14 +13,18 @@ $(function(){
 		message = $("doc-ta-1").val();
 	}
 
-	$.post("/Producer",
+	$.post("Producer",
 		{"brokerList":brokerList,
 		 "topic":topic,
 		 "messMethod":messMethod,
 		 "message":message
 		},
 		function(data,status){
-			alert(data);
+			console.log(data);
+			if(data=="success"){
+				$("#pD-info1").addClass("am-alert am-alert-info");
+				$("#pD-info1").html("发动成功");
+			}
 		});
 	});
 

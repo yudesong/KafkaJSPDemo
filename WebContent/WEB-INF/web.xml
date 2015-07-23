@@ -17,4 +17,12 @@
   	<servlet-name>ManZK</servlet-name>
   	<url-pattern>/ManZK</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>Producer</servlet-name>
+  	<servlet-class>com.servlet.ProducerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Producer</servlet-name>
+  	<url-pattern>/Producer</url-pattern>
+  </servlet-mapping>
 </web-app>
