@@ -9,13 +9,13 @@ import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 
-public class Consumer
+public class ConsumerHigh
 {
   private final ConsumerConnector consumer;
   private final String topic;
   private String groupId;
   private String zkConn;
-  public Consumer(String topic,String zkConn,String groupId)
+  public ConsumerHigh(String topic,String zkConn,String groupId)
   {
     consumer = kafka.consumer.Consumer.createJavaConsumerConnector(
             createConsumerConfig());
@@ -35,7 +35,6 @@ public class Consumer
     props.put("auto.offset.reset", "smallest");
  //  props.put("serializer.class", "kafka.serializer.StringEncoder");    
     return new ConsumerConfig(props);
-
   }
  
   public String getMessage() {
