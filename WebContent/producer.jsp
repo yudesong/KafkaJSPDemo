@@ -11,6 +11,7 @@
 <script type="text/javascript" src="public/javascripts/amazeui.js"></script>
 <script type="text/javascript" src="public/javascripts/amazeui.ie8polyfill.js"></script>
 <script type="text/javascript" src="public/javascripts/amazeui.widgets.helper.js"></script>
+<script type="text/javascript" src="public/javascripts/pro.js"></script>
 <style type="text/css">
 #item{
     width:900px;
@@ -38,15 +39,28 @@
 </ul>
 	<div id="item">
 		<div><strong>Producer</strong></div>
+		<div>Topic:&nbsp;<input type="text" id="topic"/>(默认为３个分区,3个副本)</div>
    		<div>
-        			<input type="radio" name="doc-radio-1" value="option1" >
-        			系统随机分区&nbsp;&nbsp;&nbsp;
-        			<input type="radio" name="doc-radio-1" value="option1" >
+   					broker-list:
+        			<input type="radio" name="doc-radio-0" id="broker0" value="9092" >
+        			Kafka-0&nbsp;&nbsp;
+        			<input type="radio" name="doc-radio-1" value="9093" >
+        			Kafka-1&nbsp;&nbsp;
+         			<input type="radio" name="doc-radio-2" value="9094" >
+        			Kafka-2&nbsp;&nbsp;
+        			<input type="radio" name="doc-radio-3" value="9095" >
+        			Kafka-3&nbsp;&nbsp;       			
+    		</div>
+   		<div>
+   					Kafka&nbsp;Message分区方法:
+        			<input type="radio" name="doc-radio-4" value="0" >
+        			系统随机分区&nbsp;
+        			<input type="radio" name="doc-radio-4" value="1" >
         			key-value均匀分区
     		</div>
     		<div>
-    			<span>Message:</span>&nbsp;&nbsp;&nbsp;
-    			<input type="radio" name="doc-radio-1" value="option1" >
+    			<span>Message:</span>&nbsp;
+    			<input type="radio" name="doc-radio-5" value="option1" >
         			1-99随机数字 </br>
     			<textarea class="" rows="5" id="doc-ta-1"></textarea></br>
     			<button  type="button" class="am-btn am-btn-secondary am-radius">Send</button>

@@ -27,10 +27,19 @@ public class ManZK extends HttpServlet {
 		process = Runtime.getRuntime().exec(command); 
 		BufferedReader br= new BufferedReader(new InputStreamReader(process.getInputStream()));
 		String line;
+		StringBuffer sb = new StringBuffer("");
 		PrintWriter out = resp.getWriter();
 		while((line=br.readLine())!=null);
 		{
-			out.println(command+line);
+			sb.append(line);
+			//	out.println(command+line);
+		}
+		if(sb.toString().contains("INFO")){
+			out.println("1");
+		} else if(sb.toString().contains("Exception")){
+			out.println("0");
+		}else{
+			out.println("");
 		}
 		out.flush();
 		out.close();

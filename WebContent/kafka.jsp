@@ -63,6 +63,7 @@
 	    	        <td>
 	    	           	   <button id="kFStart-2" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
 	        	           <button id="kFStop-2" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	        	            <span id="kF-info2" style="font-size:14px;"></span>
 	        	        </td>
 	        	     </tr>
 	        	     <tr>
@@ -71,6 +72,7 @@
 	    	        <td>
 	    	           	   <button id="kFStart-3" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
 	        	           <button id="kFStop-3" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	        	            <span id="kF-info3" style="font-size:14px;"></span>
 	        	        </td>	        	     	
 	        	     </tr> 
 	        	     <tr>
@@ -79,6 +81,7 @@
 	    	        <td>
 	    	           	   <button id="kFStart-4" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
 	        	           <button id="kFStop-4" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	        	            <span id="kF-info4" style="font-size:14px;"></span>
 	        	        </td>	        	     	
 	        	     </tr> 	        	     	
 	    	   </tbody>

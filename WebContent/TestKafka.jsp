@@ -24,12 +24,12 @@
 		//Test
 		if(sb.toString().contains("server-1.properties")){
 			str+="$('#kFStart-2').attr('disabled',true);";
-			str+="$('#zk-info2').addClass('am-alert am-alert-default');$('#zk-info2').html('启动中');";
+			str+="$('#kF-info2').addClass('am-alert am-alert-default');$('#kF-info2').html('启动中');";
 		}
 		//Test 
 		if(sb.toString().contains("server-2.properties")){
 			str+="$('#kFStart-3').attr('disabled',true);";
-			str+="$('#zk-info3').addClass('am-alert am-alert-default');$('#zk-info3').html('启动中');";
+			str+="$('#kF-info3').addClass('am-alert am-alert-default');$('#kF-info3').html('启动中');";
 		}
 		str+=	"});</script>";
 		out.println(str);
