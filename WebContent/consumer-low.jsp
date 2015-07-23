@@ -45,7 +45,7 @@
    		Topic:<input type="text" style="width:120px;"/>
    		Parition:<input type="text" style="width:90px;"/></br></br>
    		offset:<input type="text" style="width:90px;"/>
-   		fetchSize:<input type="text" style="width:90px;"/>
+   		<!-- fetchSize:<input type="text" style="width:90px;"/> -->	
    		<a type="button" class="am-btn am-btn-secondary am-radius">Start</a>
     		</div>
     		<div style="margin-left:40px;">

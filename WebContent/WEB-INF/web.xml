@@ -9,6 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
   	<servlet-name>ManZK</servlet-name>
   	<servlet-class>com.servlet.ManZK</servlet-class>
@@ -17,6 +18,7 @@
   	<servlet-name>ManZK</servlet-name>
   	<url-pattern>/ManZK</url-pattern>
   </servlet-mapping>
+  
   <servlet>
   	<servlet-name>Producer</servlet-name>
   	<servlet-class>com.servlet.ProducerServlet</servlet-class>
@@ -25,4 +27,22 @@
   	<servlet-name>Producer</servlet-name>
   	<url-pattern>/Producer</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ConsumerH</servlet-name>
+  	<servlet-class>com.servlet.ConsumerHServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ConsumerH</servlet-name>
+  	<url-pattern>/ConsumerH</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ConsumerL</servlet-name>
+  	<servlet-class>com.servlet.ConsumerLServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ConsumerL</servlet-name>
+  	<url-pattern>/ConsumerL</url-pattern>
+  </servlet-mapping>    
 </web-app>
