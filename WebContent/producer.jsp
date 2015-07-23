@@ -63,7 +63,7 @@
     			<input type="radio" name="doc-radio-5" value="option1" >
         			1-99随机数字 </br>
     			<textarea class="" rows="5" id="doc-ta-1"></textarea></br>
-    			<button  type="button" class="am-btn am-btn-secondary am-radius">Send</button>
+    			<button  id="sendProducer" type="button" class="am-btn am-btn-secondary am-radius">Send</button>
     		</div>		
 	</div>
 </body>
