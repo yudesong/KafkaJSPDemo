@@ -42,20 +42,20 @@
 		<div>Topic:&nbsp;<input type="text" id="topic"/>(默认为３个分区,3个副本)</div>
    		<div>
    					broker-list:
-        			<input type="radio" name="doc-radio-0" id="broker0" value="9092" >
+        			<input type="radio" name="doc-radio-0" id="doc-radio-0" value="9092" >
         			Kafka-0&nbsp;&nbsp;
-        			<input type="radio" name="doc-radio-1" value="9093" >
+        			<input type="radio" name="doc-radio-1" id="doc-radio-1" value="9093" >
         			Kafka-1&nbsp;&nbsp;
-         			<input type="radio" name="doc-radio-2" value="9094" >
+         			<input type="radio" name="doc-radio-2" id="doc-radio-2" value="9094" >
         			Kafka-2&nbsp;&nbsp;
-        			<input type="radio" name="doc-radio-3" value="9095" >
+        			<input type="radio" name="doc-radio-3" id="doc-radio-3" value="9095" >
         			Kafka-3&nbsp;&nbsp;       			
     		</div>
    		<div>
    					Kafka&nbsp;Message分区方法:
-        			<input type="radio" name="doc-radio-4" value="0" >
+        			<input type="radio" name="doc-radio-4" id="doc-radio-4" value="0" >
         			系统随机分区&nbsp;
-        			<input type="radio" name="doc-radio-4" value="1" >
+        			<input type="radio" name="doc-radio-4" id="doc-radio-4" value="1" >
         			key-value均匀分区
     		</div>
     		<div>

@@ -33,8 +33,10 @@ public class ProducerServlet extends HttpServlet {
 		String brokerList=req.getParameter("brokerList");
 		String topic = req.getParameter("topic");
 		String messMethod = req.getParameter("messMethod");
+		boolean bool;
+		if(messMethod.equals("1")) bool=true;
+		else bool =false;
 		String message = req.getParameter("message");
-		boolean bool = Boolean.parseBoolean(messMethod);
 		ProducerDemo producer = new ProducerDemo(brokerList, topic, bool);
 		String result=producer.sendMessageBat();
 		PrintWriter out = resp.getWriter();

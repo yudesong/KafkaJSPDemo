@@ -9,23 +9,23 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/apache-tomcat-7.0.63/lib/servlet-api.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/jopt-simple-3.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka_2.11-0.8.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka_2.11-0.8.2.1-javadoc.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka_2.11-0.8.2.1-scaladoc.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka_2.11-0.8.2.1-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka_2.11-0.8.2.1-test.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka-clients-0.8.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/log4j-1.2.16.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/lz4-1.2.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/metrics-core-2.2.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/scala-library-2.11.5.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/scala-parser-combinators_2.11-1.0.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/scala-xml_2.11-1.0.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/slf4j-api-1.7.6.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/slf4j-log4j12-1.6.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/snappy-java-1.1.1.6.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/zkclient-0.3.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/zookeeper-3.4.6.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/jopt-simple-3.2.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka_2.11-0.8.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka_2.11-0.8.2.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka_2.11-0.8.2.1-scaladoc.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka_2.11-0.8.2.1-sources.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka_2.11-0.8.2.1-test.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/kafka-clients-0.8.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/lz4-1.2.0.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/metrics-core-2.2.0.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/scala-library-2.11.5.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/scala-parser-combinators_2.11-1.0.2.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/scala-xml_2.11-1.0.2.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/snappy-java-1.1.1.6.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/zkclient-0.3.jar"/>
+	<classpathentry kind="lib" path="/home/yudesong/Download/kafka_2.11-0.8.2.1/libs/zookeeper-3.4.6.jar"/>
 	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
 </classpath>

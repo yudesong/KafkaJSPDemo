@@ -7,24 +7,24 @@ import kafka.producer.ProducerConfig;
 
 public class ProducerDemo {
 
-    private String brokerList;
-    private Properties props;
-    private String topic;
-    private boolean bool;
+    public static String brokerList;
+    public static  Properties props = new Properties();
+    public static String topic;
+    public static boolean bool;
     public ProducerDemo(String brokerList,String topic,boolean bool){
         this.topic = topic;
-        props = new Properties();
-        props.put("metadata.broker.list",brokerList);  
-        props.put("serializer.class", "kafka.serializer.StringEncoder");   
-        props.put("key.serializer.class", "kafka.serializer.StringEncoder");  
-        if(bool) props.put("partitioner.class", "kafka.demo.PartitionerDemo"); 
-        props.put("request.required.acks", "1");  
+        this.brokerList = brokerList;
+        this.bool = bool;
     }
 
     public String sendMessageBat(){
+        props.put("metadata.broker.list",brokerList);  
+        props.put("serializer.class", "kafka.serializer.StringEncoder");   
+        props.put("key.serializer.class", "kafka.serializer.StringEncoder");  
+        if(bool) props.put("partitioner.class", "com.kafka.PartitionDemo"); 
+        props.put("request.required.acks", "1");  
         ProducerConfig config = new ProducerConfig(props);  
         Producer<String, String> producer = new Producer<String, String>(config);  
-        long start=System.currentTimeMillis();  
         for (long i = 1; i < 100; i++) {
             String ip = "127.0.0." + i; 
             String msg = i+"";  
@@ -36,4 +36,15 @@ public class ProducerDemo {
         producer.close();
         return "success";
     } 
+    /*
+    public static void main(String[] args) {
+    	String brokerList="127.0.0.1:9092,127.0.0.1:9093,127.0.0.1:9094";
+    	String topic="test";
+    	boolean bool=true;
+		ProducerDemo producer = new ProducerDemo(brokerList, topic, bool);
+		String result=producer.sendMessageBat();
+		System.out.println(result);
+	}
+    */
+    
 }
