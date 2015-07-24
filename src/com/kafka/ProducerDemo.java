@@ -16,7 +16,7 @@ public class ProducerDemo {
     }
 
     public String sendMessageBat(){
-    	Properties props = new Properties();
+        Properties props = new Properties();
         props.put("metadata.broker.list",brokerList);  
         props.put("serializer.class", "kafka.serializer.StringEncoder");   
         props.put("key.serializer.class", "kafka.serializer.StringEncoder");  
@@ -26,17 +26,14 @@ public class ProducerDemo {
         Producer<String, String> producer = new Producer<String, String>(config);  
         for (int i = 1; i < 100; i++) {
             String ip = "127.0.0." + i; 
-            String msg = i+"";  
+            String msg = "Message:"+i;  
             //如果topic不存在，则会自动创建，默认replication-factor为1，partitions为0  
             KeyedMessage<String, String> data = new KeyedMessage<String, String>(  
                     topic, ip, msg);  
-            producer.send(data);  
-    //       System.out.println(msg);
-        }  
+            producer.send(data);
+        } 
         producer.close();
-        System.exit(0);
         return "success";
-
     } 
     
     /*

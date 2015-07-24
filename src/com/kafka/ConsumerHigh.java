@@ -11,33 +11,30 @@ import kafka.javaapi.consumer.ConsumerConnector;
 
 public class ConsumerHigh
 {
-  private final ConsumerConnector consumer;
-  private final String topic;
+  private static ConsumerConnector consumer;
   private static String groupId;
   private static String zkConn;
-  public ConsumerHigh(String topic,String zkConn,String groupId)
+  public ConsumerHigh(String zkConn,String groupId)
   {
-    consumer = kafka.consumer.Consumer.createJavaConsumerConnector(
-            createConsumerConfig());
-    this.topic = topic;
+    consumer = kafka.consumer.Consumer.createJavaConsumerConnector(createConsumerConfig());
     this.zkConn = zkConn;
     this.groupId = groupId;
   }
 
-  private static ConsumerConfig createConsumerConfig()
+  public static ConsumerConfig createConsumerConfig()
   {
     Properties props = new Properties();
     props.put("zookeeper.connect",zkConn);
     props.put("group.id", groupId);
-    props.put("zookeeper.session.timeout.ms", "4000");
-    props.put("zookeeper.sync.time.ms", "200");
+    props.put("zookeeper.session.timeout.ms", "4000000");
+    props.put("zookeeper.sync.time.ms", "200000");
 //  props.put("auto.commit.interval.ms", "1000");
     props.put("auto.offset.reset", "smallest");
  //  props.put("serializer.class", "kafka.serializer.StringEncoder");    
     return new ConsumerConfig(props);
   }
  
-  public String getMessage() {
+  public String getMessage(String topic) {
     Map<String, Integer> topicCountMap = new HashMap<String, Integer>();
     topicCountMap.put(topic, new Integer(1));
     Map<String, List<KafkaStream<byte[], byte[]>>> consumerMap = consumer.createMessageStreams(topicCountMap);
@@ -50,4 +47,20 @@ public class ConsumerHigh
   	}
   	return sb.toString();
 }
+  
+  public static void main(String[] args) {
+	
+	  String zkConn = "localhost:2181";
+	  String topic = "test";	
+	  String groupId = "yu";
+	  
+	    ConsumerHigh consumer = new ConsumerHigh(zkConn,groupId);
+	    String result;
+	    result = consumer.getMessage(topic);
+	    System.out.println(result);
+}
+  
+  
+  
+  
 }

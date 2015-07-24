@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="java.io.InputStreamReader"%>
+<%@page import="java.io.BufferedReader"%>
+<%@page import="java.io.InputStream"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -38,6 +41,31 @@
 </ul>
 	<div id="item">
 		<div><strong>Log 日志文件</strong></div>
+              <div>Topics:</div>
+             <%
+
+                    String cmd = "sh /home/yudesong/Download/kafka_2.11-0.8.2.1/bin/kafka-topics.sh --list --zookeeper localhost:2181";
+                    Process process = Runtime.getRuntime().exec(cmd);
+                    String line;
+                    StringBuffer sb = new StringBuffer();
+                    BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                    while((line=br.readLine())!=null)
+                    {
+                          sb.append(line);
+                    }
+                    out.println("<pre>");
+                    out.println(sb.toString());
+                    out.println("</pre>");
+                    br.close();
+             %>
+
+
+
+
+
+
+
+
 	</div>
 </body>
 </html>

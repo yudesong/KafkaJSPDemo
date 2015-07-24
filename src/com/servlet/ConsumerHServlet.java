@@ -30,12 +30,12 @@ public class ConsumerHServlet extends HttpServlet {
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     // TODO Auto-generated method stub
     //ConsumerHighDemo
-        
+        //  http://localhost:8080/kafka/ConsumerH?topic=test&zkConn=127.0.0.1:2181&groupId=aa
     String topic = req.getParameter("topic");
     String zkConn = req.getParameter("zkConn");
     String groupId = req.getParameter("groupId");
-    ConsumerHigh consumer = new ConsumerHigh(topic, zkConn,groupId);
-    String result=consumer.getMessage();
+    ConsumerHigh consumer = new ConsumerHigh(zkConn,groupId);
+    String result=consumer.getMessage(topic);
     PrintWriter out = resp.getWriter();
     out.print(result);
   }

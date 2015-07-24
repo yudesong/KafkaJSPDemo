@@ -11,6 +11,7 @@
 <script type="text/javascript" src="public/javascripts/amazeui.js"></script>
 <script type="text/javascript" src="public/javascripts/amazeui.ie8polyfill.js"></script>
 <script type="text/javascript" src="public/javascripts/amazeui.widgets.helper.js"></script>
+<script type="text/javascript" src="public/javascripts/consh.js"></script>
 <style type="text/css">
 #item{
     width:900px;
@@ -40,14 +41,14 @@
 		<div><strong>Consumer</strong></div>
 		<div><ul><li>High-level API</li></ul></div>
    		<div style="margin-left:40px;">
-   		Zookeeper.connection:<input type="text" id="zKconn" style="width:120px;" value="127.0.0.1:2181">
+   		Zookeeper.connection:<input type="text" id="zkConn" style="width:120px;" value="localhost:2181">
    		Topic:<input type="text" id="topic" style="width:120px;"/>
    		Group Id:<input type="text" id="groupId" style="width:90px;"/>
    		<button type="button" id="CHMessage" class="am-btn am-btn-secondary am-radius">Start</button>
     		</div>
     		<div style="margin-left:40px;">
     			<span>Recieved Message:</span></br>
-    			<textarea rows="8" id="doc-ta-1"></textarea></br>
+    			<textarea id="message" rows="8" id="doc-ta-1"></textarea></br>
     		</div>
 	</div>
 </body>
