@@ -31,6 +31,7 @@ public class ProducerDemo {
             KeyedMessage<String, String> data = new KeyedMessage<String, String>(  
                     topic, ip, msg);  
             producer.send(data);
+            System.out.println(data);
         } 
         producer.close();
         return "success";
@@ -45,6 +46,6 @@ public class ProducerDemo {
 		String result=producer.sendMessageBat();
 		System.out.println(result);
 	}
-    
     */
+    
 }

@@ -54,4 +54,10 @@ public class SimpleConsumerDemo {
     FetchResponse fetchResponse = simpleConsumer.fetch(req);
     return printMessages((ByteBufferMessageSet) fetchResponse.messageSet(topic, partition));
   }
+
+  
+  
+  
+  
+  
 }

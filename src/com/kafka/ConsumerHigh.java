@@ -11,9 +11,10 @@ import kafka.javaapi.consumer.ConsumerConnector;
 
 public class ConsumerHigh
 {
-  private static ConsumerConnector consumer;
-  private static String groupId;
-  private static String zkConn;
+  public static ConsumerConnector consumer;
+  public static String zkConn;
+  public static String groupId;
+
   public ConsumerHigh(String zkConn,String groupId)
   {
     consumer = kafka.consumer.Consumer.createJavaConsumerConnector(createConsumerConfig());
@@ -21,11 +22,11 @@ public class ConsumerHigh
     this.groupId = groupId;
   }
 
-  public static ConsumerConfig createConsumerConfig()
+  public ConsumerConfig createConsumerConfig()
   {
     Properties props = new Properties();
-    props.put("zookeeper.connect",zkConn);
-    props.put("group.id", groupId);
+    props.put("zookeeper.connect","localhost:2181");
+    props.put("group.id", "1004");
     props.put("zookeeper.session.timeout.ms", "4000000");
     props.put("zookeeper.sync.time.ms", "200000");
 //  props.put("auto.commit.interval.ms", "1000");
@@ -40,11 +41,17 @@ public class ConsumerHigh
     Map<String, List<KafkaStream<byte[], byte[]>>> consumerMap = consumer.createMessageStreams(topicCountMap);
     KafkaStream<byte[], byte[]> stream =  consumerMap.get(topic).get(0);
     ConsumerIterator<byte[], byte[]> it = stream.iterator();
-    StringBuffer sb = new StringBuffer("");
+    StringBuffer sb = new StringBuffer();
     while(it.hasNext()){
-//      System.out.println("Consumer:------>"+new String(it.next().message()));
-    	sb.append(it.next().message());
+    //   System.out.println("Consumer:------>"+new String(it.next().message()));
+    	String msg = it.next().message().toString();
+    	System.out.println(msg+"----------->");
+    	sb.append(msg);
+    	if(msg.equals("")) break;
   	}
+    
+    System.out.println("-----------------------------------|");
+    System.out.println(sb.toString());
   	return sb.toString();
 }
   
