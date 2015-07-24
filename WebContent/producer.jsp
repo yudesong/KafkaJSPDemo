@@ -62,10 +62,19 @@
     			<span>Message:</span>&nbsp;
     			<input type="radio" name="doc-radio-5" value="option1" >
         			1-99随机数字 </br>
-    			<textarea class="" rows="5" id="doc-ta-1"></textarea></br>
+    			<textarea class="" rows="10" cols="60" id="doc-ta-1"></textarea></br>
     			<button  id="sendProducer" type="button" class="am-btn am-btn-secondary am-radius">Send</button>
     			<span id="pD-info1" style="font-size:14px;"></span>
     		</div>		
+	</div>
+	<button id="loading" type="button" class="am-btn am-btn-success" style="display:none" data-am-modal="{target: '#my-modal-loading'}"></button>
+	<div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="my-modal-loading">
+  		<div class="am-modal-dialog">
+    		<div class="am-modal-hd">正在发送中.........</div>
+    			<div class="am-modal-bd">
+      				<span class="am-icon-spinner am-icon-spin"></span>
+    			</div>
+  			</div>
 	</div>
 </body>
 </html>

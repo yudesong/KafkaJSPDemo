@@ -53,8 +53,8 @@
 	    	        <td>Zookeeper-1</td>
 	    	        <td>2181</td>
 	    	        <td>
-	    	               <button id="zkStart-1" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
-	        	           <button id="zkStop-1" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	    	               <button id="zkStart-1" type="button" class="am-btn am-btn-secondary am-radius am-icon-play">Start</button>
+	        	           <button id="zkStop-1" type="button" class="am-btn am-btn-danger am-radius am-icon-pause">Stop</button>
 	        	           <span id="zk-info1" style="font-size:14px;"></span>
 	        	           <!-- class="am-alert am-alert-success" -->
 	        	        </td>    
@@ -63,16 +63,16 @@
 	  	        <td>Zookeeper-2</td>
 	    	        <td>2182</td>
 	    	        <td>
-	    	           <button id="zkStart-2" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
-	        	       <button id="zkStop-2" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	    	           <button id="zkStart-2" type="button" class="am-btn am-btn-secondary am-radius am-icon-play">Start</button>
+	        	       <button id="zkStop-2" type="button" class="am-btn am-btn-danger am-radius am-icon-pause">Stop</button>
 	        	        </td>
 	        	     </tr>
 	        	     <tr>
 	  	        <td>Zookeeper-3</td>
 	    	        <td>2183</td>
 	    	        <td>
-	    	           <button id="zkStart-3" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
-	        	       <button id="zkStop-2" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	    	           <button id="zkStart-3" type="button" class="am-btn am-btn-secondary am-radius am-icon-play">Start</button>
+	        	       <button id="zkStop-2" type="button" class="am-btn am-btn-danger am-radius am-icon-pause">Stop</button>
 	        	        </td>	        	     	
 	        	     </tr> 	
 	    	   </tbody>

@@ -52,8 +52,8 @@
 	    	        <td>Kafka-1</td>
 	    	        <td>9092</td>
 	    	        <td>
-	    	           	   <button id="kFStart-1" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
-	        	           <button id="kFStop-1" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	    	           	   <button id="kFStart-1" type="button" class="am-btn am-btn-secondary am-radius am-icon-play">Start</button>
+	        	           <button id="kFStop-1" type="button" class="am-btn am-btn-danger am-radius am-icon-pause">Stop</button>
 	        	           <span id="kF-info1" style="font-size:14px;"></span>
 	        	        </td>    
 	    	     </tr>
@@ -61,8 +61,8 @@
 	  	        <td>Kafka-2</td>
 	    	        <td>9093</td>
 	    	        <td>
-	    	           	   <button id="kFStart-2" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
-	        	           <button id="kFStop-2" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	    	           	   <button id="kFStart-2" type="button" class="am-btn am-btn-secondary am-radius am-icon-play">Start</button>
+	        	           <button id="kFStop-2" type="button" class="am-btn am-btn-danger am-radius am-icon-pause">Stop</button>
 	        	            <span id="kF-info2" style="font-size:14px;"></span>
 	        	        </td>
 	        	     </tr>
@@ -70,8 +70,8 @@
 	  	        <td>Kafka-3</td>
 	    	        <td>9094</td>
 	    	        <td>
-	    	           	   <button id="kFStart-3" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
-	        	           <button id="kFStop-3" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	    	           	   <button id="kFStart-3" type="button" class="am-btn am-btn-secondary am-radius am-icon-play">Start</button>
+	        	           <button id="kFStop-3" type="button" class="am-btn am-btn-danger am-radius am-icon-pause">Stop</button>
 	        	            <span id="kF-info3" style="font-size:14px;"></span>
 	        	        </td>	        	     	
 	        	     </tr> 
@@ -79,8 +79,8 @@
 	  	        <td>Kafka-4</td>
 	    	        <td>9095</td>
 	    	        <td>
-	    	           	   <button id="kFStart-4" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
-	        	           <button id="kFStop-4" type="button" class="am-btn am-btn-danger am-radius">Stop</button>
+	    	           	   <button id="kFStart-4" type="button" class="am-btn am-btn-secondary am-radius am-icon-play">Start</button>
+	        	           <button id="kFStop-4" type="button" class="am-btn am-btn-danger am-radius am-icon-pause">Stop</button>
 	        	            <span id="kF-info4" style="font-size:14px;"></span>
 	        	        </td>	        	     	
 	        	     </tr> 	        	     	

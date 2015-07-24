@@ -27,7 +27,9 @@ import kafka.producer.ProducerConfig;
 
 public class ConsumerHServlet extends HttpServlet {
 
-  @Override
+	private static final long serialVersionUID = 1L;
+
+@Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     // TODO Auto-generated method stub
     doPost(req, resp);
@@ -43,6 +45,12 @@ public class ConsumerHServlet extends HttpServlet {
     String groupId = req.getParameter("groupId");
     PrintWriter out = resp.getWriter();
     
+    ConsumerHigh demo = new ConsumerHigh(zkConn, groupId, topic);  
+    demo.run();
+    out.println(demo.getMessage());
+    out.flush();
+    out.close();
+    /*
     Properties props = new Properties();
     props.put("zookeeper.connect",zkConn);
     props.put("group.id", groupId);
@@ -63,5 +71,6 @@ public class ConsumerHServlet extends HttpServlet {
       while(it.hasNext()){
       	out.println(new String(it.next().message().toString())+"\n");
     	}
+    	*/
   }
 }

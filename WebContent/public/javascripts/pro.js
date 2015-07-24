@@ -1,5 +1,6 @@
 $(function(){
 	$("#sendProducer").click(function(){
+	$("#loading").click();
 	var topic = $("#topic").val();
 	var brokerList="";
 	var messMethod=$('input[name="doc-radio-4"]:checked').val();
@@ -12,6 +13,7 @@ $(function(){
 	}else{
 		message = $("doc-ta-1").val();
 	}
+	
 //	console.log(topic+brokerList+messMethod+message);
 	$.post("Producer",
 		{"brokerList":brokerList,
@@ -21,7 +23,9 @@ $(function(){
 		},
 		function(data,status){
 			console.log(data);
-			if(data=="success"){
+			if(data!=""){
+				$("#my-modal-loading").modal('close');
+				$("#doc-ta-1").html(data);
 				$("#pD-info1").addClass("am-alert am-alert-info");
 				$("#pD-info1").html("发送成功");
 			}

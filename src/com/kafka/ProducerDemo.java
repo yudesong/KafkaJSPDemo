@@ -23,7 +23,8 @@ public class ProducerDemo {
         if(bool)   props.put("partitioner.class", "com.kafka.PartitionDemo"); 
         props.put("request.required.acks", "1");  
         ProducerConfig config = new ProducerConfig(props);
-        Producer<String, String> producer = new Producer<String, String>(config);  
+        Producer<String, String> producer = new Producer<String, String>(config);
+        StringBuffer sb = new StringBuffer("");  
         for (int i = 1; i < 100; i++) {
             String ip = "127.0.0." + i; 
             String msg = "Message:"+i;  
@@ -31,10 +32,11 @@ public class ProducerDemo {
             KeyedMessage<String, String> data = new KeyedMessage<String, String>(  
                     topic, ip, msg);  
             producer.send(data);
-            System.out.println(data);
+            sb.append(data);
+ //           System.out.println(data);
         } 
         producer.close();
-        return "success";
+        return sb.toString();
     } 
     
     /*

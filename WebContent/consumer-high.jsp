@@ -51,5 +51,15 @@
     			<textarea id="message" rows="8" id="doc-ta-1"></textarea></br>
     		</div>
 	</div>
+	
+	<button id="loading" type="button" class="am-btn am-btn-success" style="display:none" data-am-modal="{target: '#my-modal-loading'}"></button>
+	<div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="my-modal-loading">
+  		<div class="am-modal-dialog">
+    		<div class="am-modal-hd">正在载入...</div>
+    			<div class="am-modal-bd">
+      				<span class="am-icon-spinner am-icon-spin"></span>
+    			</div>
+  			</div>
+	</div>
 </body>
 </html>
