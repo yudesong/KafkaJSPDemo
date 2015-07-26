@@ -3,6 +3,8 @@ package com.kafka;
 import kafka.api.FetchRequest;
 import kafka.api.FetchRequestBuilder;
 import kafka.javaapi.FetchResponse;
+
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
@@ -55,8 +57,24 @@ public class SimpleConsumerDemo {
     return printMessages((ByteBufferMessageSet) fetchResponse.messageSet(topic, partition));
   }
 
-  
-  
+  /*
+  public static void main(String[] args) {
+	
+	    String topic = "test";
+	    int kafkaServerPort = 9092;
+	    int partition = 2;
+	    int offset = 0;
+	    SimpleConsumerDemo consumer = new SimpleConsumerDemo(topic,kafkaServerPort,partition,offset);
+	    String result = null;
+		try {
+			result = consumer.pullMessage();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(result);
+}
+  */
   
   
   
