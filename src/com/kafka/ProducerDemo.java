@@ -33,21 +33,8 @@ public class ProducerDemo {
                     topic, ip, msg);  
             producer.send(data);
             sb.append(data);
- //           System.out.println(data);
         } 
         producer.close();
         return sb.toString();
     } 
-    
-    /*
-    public static void main(String[] args) {
-    	String brokerList="127.0.0.1:9092,127.0.0.1:9093,127.0.0.1:9094";
-    	String topic="test";
-    	boolean bool=true;
-		ProducerDemo producer = new ProducerDemo(brokerList, topic, bool);
-		String result=producer.sendMessageBat();
-		System.out.println(result);
-	}
-    */
-    
 }

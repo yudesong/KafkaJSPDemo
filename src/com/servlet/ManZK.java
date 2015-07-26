@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -32,7 +31,6 @@ public class ManZK extends HttpServlet {
 		while((line=br.readLine())!=null);
 		{
 			sb.append(line);
-			//	out.println(command+line);
 		}
 		if(sb.toString().contains("INFO")){
 			out.println("1");

@@ -5,15 +5,12 @@ import java.io.PrintWriter;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.kafka.ProducerDemo;
 import com.kafka.SimpleConsumerDemo;
-
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
