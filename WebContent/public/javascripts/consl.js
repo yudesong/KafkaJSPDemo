@@ -1,21 +1,25 @@
 $(function(){
-	$("#CHMessage").click(function(){
-	var zKconn = $("#zKconn").val();
-	var topic = $("topic").val();
-	var groupId = $("groupId").val();
-//	console.log(topic+brokerList+messMethod+message);
-	$.post("Producer",
-		{"brokerList":brokerList,
+	$("#send").click(function(){
+	var port = $("#port").val();
+	var topic = $("#topic").val();
+	var parition = $("#parition").val();
+	var offset = $("#offset").val();
+	$("#loading").click();
+//	console.log(port+topic+parition+offset);
+
+	$.post("ConsumerL",
+		{"port":port,
 		 "topic":topic,
-		 "messMethod":messMethod,
-		 "message":message
+		 "parition":parition,
+		 "offset":offset
 		},
 		function(data,status){
-			console.log(data);
-			if(data=="success"){
-				$("#pD-info1").addClass("am-alert am-alert-info");
-				$("#pD-info1").html("发送成功");
+	//		console.log(data);
+			if(data!=""){
+				$("#my-modal-loading").modal('close');
+				$("#doc-ta-1").html(data);
 			}
 		});
+
 	});
 });

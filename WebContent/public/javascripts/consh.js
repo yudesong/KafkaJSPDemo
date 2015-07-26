@@ -22,7 +22,7 @@ $(function(){
 			console.log(data);
 			if(data!=""){
 				$("#my-modal-loading").modal('close');
-				$("#message").html(data);
+				$("#doc-ta-1").html(data);
 			}
 			
 		});

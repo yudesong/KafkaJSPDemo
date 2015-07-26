@@ -48,7 +48,7 @@
     		</div>
     		<div style="margin-left:40px;">
     			<span>Recieved Message:</span></br>
-    			<textarea id="message" rows="8" id="doc-ta-1"></textarea></br>
+    			<textarea class="" rows="10" cols="60" id="doc-ta-1"></textarea></br>
     		</div>
 	</div>
 	

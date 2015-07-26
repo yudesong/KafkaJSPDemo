@@ -42,22 +42,44 @@
 	<div id="item">
 		<div><strong>Log 日志文件</strong></div>
               <div>Topics:</div>
+              <%! String[] topic=new String[5]; %>
              <%
-
                     String cmd = "sh /home/yudesong/Download/kafka_2.11-0.8.2.1/bin/kafka-topics.sh --list --zookeeper localhost:2181";
                     Process process = Runtime.getRuntime().exec(cmd);
                     String line;
                     StringBuffer sb = new StringBuffer();
                     BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                    int i=0;
                     while((line=br.readLine())!=null)
                     {
-                          sb.append(line+"\n");
+                    	topic[i] = line;
+                        sb.append(line+"\n");
+                        i++;
                     }
-                    out.println("<pre>");
+                    out.println("<pre style='width:300px;'>");
                     out.println(sb.toString());
                     out.println("</pre>");
                     br.close();
              %>
+             <div>
+             查看Topic分区情况:
+             <select id="topic">
+             	<%
+             		int length = topic.length;
+             		int k;
+             		for(k=0;k<length;k++)
+             		{
+             			out.print("<option value='"+topic[k]+"'>"+topic[k]+"</option>");
+             		}
+             	%>
+             </select>
+             
+             
+             
+             </div>
+             
+             
+             
 	</div>
 </body>
 </html>

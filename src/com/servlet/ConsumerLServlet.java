@@ -20,7 +20,9 @@ import kafka.producer.ProducerConfig;
 
 public class ConsumerLServlet extends HttpServlet {
 
-  @Override
+	private static final long serialVersionUID = 1L;
+
+@Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     // TODO Auto-generated method stub
     doPost(req, resp);
@@ -32,18 +34,22 @@ public class ConsumerLServlet extends HttpServlet {
     //ConsumerLow Demo
         
     String topic = req.getParameter("topic");
-    int kafkaServerPort = Integer.parseInt(req.getParameter("kafkaServerPort"));
-    int partition = Integer.parseInt(req.getParameter("partition"));
-    int offset = Integer.parseInt(req.getParameter("offset"));
-    SimpleConsumerDemo consumer = new SimpleConsumerDemo(topic,kafkaServerPort,partition,offset);
+    int port = Integer.parseInt(req.getParameter("port").toString());
+    int parition = Integer.parseInt(req.getParameter("parition").toString());
+    int offset = Integer.parseInt(req.getParameter("offset").toString());
+    
+    SimpleConsumerDemo consumer = new SimpleConsumerDemo(topic,port,parition,offset);
     String result = null;
-	try {
+	try{
 		result = consumer.pullMessage();
-	} catch (Exception e) {
+	}catch (Exception e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+  	
     PrintWriter out = resp.getWriter();
     out.print(result);
+    out.flush();
+    out.close();
   }
 }

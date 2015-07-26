@@ -11,6 +11,7 @@
 <script type="text/javascript" src="public/javascripts/amazeui.js"></script>
 <script type="text/javascript" src="public/javascripts/amazeui.ie8polyfill.js"></script>
 <script type="text/javascript" src="public/javascripts/amazeui.widgets.helper.js"></script>
+<script type="text/javascript" src="public/javascripts/consl.js"></script>
 <style type="text/css">
 #item{
     width:900px;
@@ -41,17 +42,26 @@
 		<div><ul><li>Low-level API</li></ul></div>
    		<div style="margin-left:40px;">
    		Kafka-broker</br>
-   		Port:<input type="text" style="width:90px;">
-   		Topic:<input type="text" style="width:120px;"/>
-   		Parition:<input type="text" style="width:90px;"/></br></br>
-   		offset:<input type="text" style="width:90px;"/>
+   		Port:<input type="text" id="port" style="width:90px;">
+   		Topic:<input type="text" id="topic" style="width:120px;"/>
+   		Parition:<input type="text" id="parition" style="width:90px;"/></br></br>
+   		offset:<input type="text" id="offset" style="width:90px;"/>
    		<!-- fetchSize:<input type="text" style="width:90px;"/> -->	
-   		<a type="button" class="am-btn am-btn-secondary am-radius">Start</a>
+   		<button id="send" type="button" class="am-btn am-btn-secondary am-radius">Start</button>
     		</div>
     		<div style="margin-left:40px;">
     			<span>Recieved Message:</span></br>
-    			<textarea class="" rows="8" id="doc-ta-1"></textarea></br>
+    			<textarea class="" rows="10" cols="60" id="doc-ta-1"></textarea></br>
     		</div>
 	</div>
+    <button id="loading" type="button" class="am-btn am-btn-success" style="display:none" data-am-modal="{target: '#my-modal-loading'}"></button>
+  <div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="my-modal-loading">
+      <div class="am-modal-dialog">
+        <div class="am-modal-hd">正在载入...</div>
+          <div class="am-modal-bd">
+              <span class="am-icon-spinner am-icon-spin"></span>
+          </div>
+        </div>
+  </div>
 </body>
 </html>

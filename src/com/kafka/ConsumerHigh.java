@@ -55,6 +55,7 @@ public class ConsumerHigh {
         return new ConsumerConfig(props);  
     }  
    
+   /*
     public static void main(String[] arg) {  
         String[] args = { "127.0.0.1:2181", "345", "test"};  
         String zooKeeper = args[0];  
@@ -63,5 +64,6 @@ public class ConsumerHigh {
         ConsumerHigh demo = new ConsumerHigh(zooKeeper, groupId, topic);  
         demo.run();
         System.out.println(demo.getMessage());
-    }  
+    } 
+    */ 
 } 
