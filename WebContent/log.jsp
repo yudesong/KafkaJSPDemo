@@ -81,6 +81,7 @@
 	</div>
 	<div>
 		&nbsp;&nbsp;&nbsp;&nbsp;<strong>日志文件列表</strong></br>
+		&nbsp;&nbsp;&nbsp;&nbsp;
 <ul class="am-tree" id="firstTree">
   <li class="am-tree-branch am-hide" data-template="treebranch">
     <div class="am-tree-branch-header">
@@ -98,13 +99,7 @@
       <span class="am-tree-label"></span>
     </button>
   </li>
-</ul>	
-	
-	
-	
-	
-	
-	
+</ul>
 	</div>
 <button id="loading" type="button" class="am-btn am-btn-success" style="display:none" data-am-modal="{target: '#my-modal-loading'}"></button>
   <div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="my-modal-loading">

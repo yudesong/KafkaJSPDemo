@@ -30,33 +30,38 @@ $(function(){
 	
 	  var data = [
 	              {
-	                title: '苹果公司',
+	                title: 'kafka-logs',
 	                type: 'folder',
 	                products: [
 	                  {
-	                    title: 'iPhone',
+	                    title: 'test-0',
 	                    type: 'item'
 	                  },
 	                  {
-	                    title: 'iMac',
-	                    type: 'item'
-	                  },
-	                  {
-	                    title: 'MacBook Pro',
+	                    title: 'test-3',
 	                    type: 'item'
 	                  }
 	                ]
 	              },
 	              {
-	                title: '微软公司',
-	                type: 'item'
+	                title: 'kafka-logs-1',
+	                type: 'folder',
+	                products: [
+	                 {
+	                	 title:"test-1",
+	                	 type:'item'
+	                 }
+	                ]
 	              },
 	              {
-	                title: 'GitHub',
-	                type: 'item',
-	                attr: {
-	                  icon: 'am-icon-github'
-	                }
+	                title: 'kafka-logs-2',
+	                type: 'folder',
+	                products: [
+	                  {  
+	                	  title: 'test-2',
+	                	  type: 'item'	
+	                  }
+	                ]
 	              }
 	            ];
 	
