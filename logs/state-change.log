@@ -1,1 +1,6 @@
-[2015-07-27 12:31:36,026] DEBUG preRegister called. Server=com.sun.jmx.mbeanserver.JmxMBeanServer@a70ad76, name=log4j:logger=state.change.logger (state.change.logger)
+[2015-07-27 13:33:55,101] DEBUG preRegister called. Server=com.sun.jmx.mbeanserver.JmxMBeanServer@6b414655, name=log4j:logger=state.change.logger (state.change.logger)
+[2015-07-27 13:34:17,226] DEBUG preRegister called. Server=com.sun.jmx.mbeanserver.JmxMBeanServer@6b414655, name=log4j:logger=state.change.logger (state.change.logger)
+[2015-07-27 13:36:52,517] DEBUG preRegister called. Server=com.sun.jmx.mbeanserver.JmxMBeanServer@a70ad76, name=log4j:logger=state.change.logger (state.change.logger)
+[2015-07-27 13:38:48,675] DEBUG preRegister called. Server=com.sun.jmx.mbeanserver.JmxMBeanServer@3d6396f5, name=log4j:logger=state.change.logger (state.change.logger)
+[2015-07-27 13:40:11,057] DEBUG preRegister called. Server=com.sun.jmx.mbeanserver.JmxMBeanServer@6b8c2354, name=log4j:logger=state.change.logger (state.change.logger)
+[2015-07-27 13:50:50,628] DEBUG preRegister called. Server=com.sun.jmx.mbeanserver.JmxMBeanServer@a70ad76, name=log4j:logger=state.change.logger (state.change.logger)

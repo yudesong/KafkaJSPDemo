@@ -34,24 +34,29 @@ public class ConsumerHigh {
                 .createMessageStreams(topicCountMap);  
         KafkaStream<byte[], byte[]> stream = consumerMap.get(topic).get(0);  
         ConsumerIterator<byte[], byte[]> it = stream.iterator();
-        int i=1;
+        long start=System.currentTimeMillis();  
+        int i=0;
         while(it.hasNext()){
-           String msg = new String(it.next().message().toString());
+           String msg;
+           msg = new String(it.next().message());
            sb.append(msg+"\n");
-           i++;
-           if(i>100) consumer.shutdown();
-        } 
+           long end = System.currentTimeMillis();
+           if(end-start>=100) consumer.shutdown();
+        //   System.out.println("-->"+end);
+         //  i++;
+        }
+        consumer.shutdown();
     }  
    
-    private static ConsumerConfig createConsumerConfig(String a_zookeeper, String a_groupId) {  
+    public ConsumerConfig createConsumerConfig(String a_zookeeper, String a_groupId) {  
         Properties props = new Properties();  
         props.put("zookeeper.connect", a_zookeeper);  
         props.put("group.id", a_groupId);  
-        props.put("zookeeper.session.timeout.ms", "4000");
+        props.put("zookeeper.session.timeout.ms", "400");
         props.put("zookeeper.sync.time.ms", "200");
         props.put("auto.commit.interval.ms", "1000");
         props.put("auto.offset.reset", "smallest");
         props.put("serializer.class", "kafka.serializer.StringEncoder");    
         return new ConsumerConfig(props);  
-    } 
+    }
 } 

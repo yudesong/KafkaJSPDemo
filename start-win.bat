@@ -19,37 +19,37 @@ for /l %%a in (1,1,100) do (
 	:0
 		echo.
 	:1
-		%kafka_path%/bin/windows/zookeeper-server-start.bat %kafka_path%/config/zookeeper.properties
-		goto opt_end
+		%kafka_path%/bin/windows/zookeeper-server-start.bat %kafka_path%/config/zookeeper.properties 1>nul 2>nul
+		goto optend
 	:2
-		%kafka_path%/bin/windows/kafka-server-start.bat %kafka_path%/config/server.properties
-		%kafka_path%/bin/windows/kafka-server-start.bat %kafka_path%/config/server-1.properties
-		%kafka_path%/bin/windows/kafka-server-start.bat %kafka_path%/config/server-2.properties
-		goto opt_end
+		%kafka_path%/bin/windows/kafka-server-start.bat %kafka_path%/config/server.properties 1>nul 2>nul
+		%kafka_path%/bin/windows/kafka-server-start.bat %kafka_path%/config/server-1.properties 1>nul 2>nul
+		%kafka_path%/bin/windows/kafka-server-start.bat %kafka_path%/config/server-2.properties 1>nul 2>nul
+		goto optend
 	:3	
 		set /p topic=请输入Topic名:
 		set /p replication=副本个数:
 		set /p paritions=分区个数:
 		%kafka_path%/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor %replication% --partitions %paritions% --topic %topic%
-		goto opt_end
+		goto optend
 	:4
 		%kafka_path%/bin/kafka-topics.sh --list --zookeeper localhost:2181
-		goto opt_end
+		goto optend
 	:5
 		set /p topic=Topic名:
 		echo Ctrl+c退出发送
 		%kafka_path%/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic %topic% 
-		goto opt_end
+		goto optend
 	:6
 		set /p topic=Topic名:
 		echo Ctrl+c退出发送
 		%kafka_path%/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic %topic% --from-beginning		
-		goto opt_end
+		goto optend
 	:7
 		set /p topic=Topic名:
 		%kafka_path%/bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic %topic%		
-		goto opt_end	
-	:opt_end
+		goto optend	
+	:optend
 		echo.	
 )
 

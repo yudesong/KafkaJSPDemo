@@ -32,7 +32,7 @@ public class ProducerDemo {
             KeyedMessage<String, String> data = new KeyedMessage<String, String>(  
                     topic, ip, msg);  
             producer.send(data);
-            sb.append(data);
+            sb.append(data+"\n");
         } 
         producer.close();
         return sb.toString();
