@@ -7,5 +7,5 @@
   <li>Consumer High 和Low　Api的使用演示</li>
   <li>查看Topics与日志文件</li>
 </ul>
-＃Shell脚本程序(start.sh)
+Shell脚本程序(start.sh)
 方便管理Kafka集群系统,与功能演示
