@@ -16,58 +16,31 @@ $(function(){
 		});
 	});
 	
-	 $('#firstTree').tree({
-		    dataSource: function(options, callback) {
-		      // 模拟异步加载
-		      setTimeout(function() {
-		        callback({data: options.products || data});
-		      }, 400);
-		    },
-		    multiSelect: false,
-		    cacheItems: true,
-		    folderSelect: false
-		  });
+//	$("#loading").click();
 	
-	  var data = [
-	              {
-	                title: 'kafka-logs',
-	                type: 'folder',
-	                products: [
-	                  {
-	                    title: 'test-0',
-	                    type: 'item'
-	                  },
-	                  {
-	                    title: 'test-3',
-	                    type: 'item'
-	                  }
-	                ]
-	              },
-	              {
-	                title: 'kafka-logs-1',
-	                type: 'folder',
-	                products: [
-	                 {
-	                	 title:"test-1",
-	                	 type:'item'
-	                 }
-	                ]
-	              },
-	              {
-	                title: 'kafka-logs-2',
-	                type: 'folder',
-	                products: [
-	                  {  
-	                	  title: 'test-2',
-	                	  type: 'item'	
-	                  }
-	                ]
-	              }
-	            ];
+//	
 	
+	var data1;
+	$.post("fileServlet",{},function(data1,status){
+	//	 var data =JSON.parse(data1);
+		var data = eval(data1);
+	//	 var data = [{title:'kafka-logs',type:'folder',products:[{title:'test-0',type:'item'},{title:'test-3',type:'item'}]},{title:'kafka-logs-1',type:'folder',products:[{title:'test-1',type:'item'}]},{title:'kafka-logs-2',type:'folder',products:[{title:'test-2',type:'item'}]}];
+	//	 console.log(typeof data);
+		 $('#firstTree').tree({
+			    dataSource: function(options, callback) {
+			      // 模拟异步加载
+			      setTimeout(function() {
+			        callback({data: options.products || data});
+			      }, 400);
+			    },
+			    multiSelect: false,
+			    cacheItems: true,
+			    folderSelect: false
+			  });
+	});
 	
+
+	/*
 	
-	
-	
-	
+	*/
 });

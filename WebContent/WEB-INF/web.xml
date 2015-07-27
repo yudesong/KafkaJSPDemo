@@ -53,5 +53,14 @@
   <servlet-mapping>
   	<servlet-name>LogServlet</servlet-name>
   	<url-pattern>/LogServlet</url-pattern>
-  </servlet-mapping>      
+  </servlet-mapping>   
+  
+  <servlet>
+  	<servlet-name>fileServlet</servlet-name>
+  	<servlet-class>com.servlet.fileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>fileServlet</servlet-name>
+  	<url-pattern>/fileServlet</url-pattern>
+  </servlet-mapping>    
 </web-app>
