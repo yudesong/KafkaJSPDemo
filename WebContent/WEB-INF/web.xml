@@ -44,5 +44,14 @@
   <servlet-mapping>
   	<servlet-name>ConsumerL</servlet-name>
   	<url-pattern>/ConsumerL</url-pattern>
-  </servlet-mapping>    
+  </servlet-mapping>   
+  
+  <servlet>
+  	<servlet-name>LogServlet</servlet-name>
+  	<servlet-class>com.servlet.LogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LogServlet</servlet-name>
+  	<url-pattern>/LogServlet</url-pattern>
+  </servlet-mapping>      
 </web-app>
