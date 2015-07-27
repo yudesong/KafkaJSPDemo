@@ -87,6 +87,9 @@
 	    	   </tbody>
 		</table>
 	</div>
+<!-- 
 	<%@include file="TestKafka.jsp" %>
+ -->	
+	<%@include file="TestKafka-win.jsp" %>
 </body>
 </html>

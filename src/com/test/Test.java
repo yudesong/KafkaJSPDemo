@@ -1,6 +1,12 @@
+package com.test;
+
+import com.kafka.ConsumerHigh;
+import com.kafka.ProducerDemo;
+import com.kafka.SimpleConsumerDemo;
+
 public class Test{
 
-     public void testProducer(){
+     public static void testProducer(){
          String brokerList="127.0.0.1:9092,127.0.0.1:9093,127.0.0.1:9094";
          String topic="test";
          boolean bool=true;
@@ -9,7 +15,7 @@ public class Test{
          System.out.println(result);
      }
 
-     public void testConsumerH(){
+     public static void testConsumerH(){
         String[] args = { "127.0.0.1:2181", "345", "test"};  
         String zooKeeper = args[0];  
         String groupId = args[1];  
@@ -19,7 +25,7 @@ public class Test{
         System.out.println(demo.getMessage());
      }
 
-     public void testConsumerL(){
+     public static void testConsumerL(){
          String topic = "test";
          int kafkaServerPort = 9092;
          int partition = 2;

@@ -44,8 +44,9 @@
               <div>Topics:</div>
               <%! String[] topic=new String[5]; %>
              <%
-                    String cmd = "sh /home/yudesong/Download/kafka_2.11-0.8.2.1/bin/kafka-topics.sh --list --zookeeper localhost:2181";
-                    Process process = Runtime.getRuntime().exec(cmd);
+//                  String cmd = "sh /home/yudesong/Download/kafka_2.11-0.8.2.1/bin/kafka-topics.sh --list --zookeeper localhost:2181";
+             		String cmd = "C:/Users/yuds/kafka_2.11-0.8.2.1/bin/windows/kafka-topics.bat --list --zookeeper localhost:2181";
+             		Process process = Runtime.getRuntime().exec(cmd);
                     String line;
                     StringBuffer sb = new StringBuffer();
                     BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -62,7 +63,7 @@
                     br.close();
              %>
              <div>
-             查看Topic分区情况:
+             	查看Topic分区情况:
              <select id="topic">
              	<%
              		int length = topic.length;
@@ -73,13 +74,7 @@
              		}
              	%>
              </select>
-             
-             
-             
-             </div>
-             
-             
-             
+             </div>      
 	</div>
 </body>
 </html>
