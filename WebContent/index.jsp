@@ -78,9 +78,6 @@
 	    	   </tbody>
 		</table>
 	</div>
-<!-- 
-	<%@include file="test.jsp" %>
- -->	
 	<%@include file="test-win.jsp" %>
 </body>
 </html>
