@@ -23,7 +23,8 @@ public class ManZK extends HttpServlet {
 		String manager = req.getParameter("manager");
 		Process process;
 		String command = "sh  /home/yudesong/Download/kafka_2.11-0.8.2.1/bin/zookeeper-server-"+manager+".sh  /home/yudesong/Download/kafka_2.11-0.8.2.1/config/zookeeper.properties";
-		process = Runtime.getRuntime().exec(command); 
+		String cmd1 = "C:/Users/yuds/kafka_2.11-0.8.2.1/bin/windows/zookeeper-server-"+manager+".bat  C:/Users/yuds/kafka_2.11-0.8.2.1/config/zookeeper.properties";
+		process = Runtime.getRuntime().exec(cmd1); 
 		BufferedReader br= new BufferedReader(new InputStreamReader(process.getInputStream()));
 		String line;
 		StringBuffer sb = new StringBuffer("");
