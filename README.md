@@ -8,4 +8,12 @@
   <li>查看Topics与日志文件</li>
 </ul>
 Shell脚本程序(start.sh)
-方便管理Kafka集群系统,与功能演示
+方便管理Kafka集群系统,与功能演示</br>
+<img src="shell.png"></br>
+WEB版显示效果图：</br>
+<igm src="kafka1-1.png"/></br>
+<igm src="kafka1-2.png"/></br>
+<igm src="kafka1-3.png"/></br>
+<igm src="kafka1-4.png"/></br>
+<igm src="kafka1-5.png"/></br>
+<igm src="kafka1-6.png"/></br>
